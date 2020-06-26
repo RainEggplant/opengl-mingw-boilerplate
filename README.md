@@ -1,6 +1,6 @@
 # OpenGL MinGW Boilerplate
 
-This repository provides a boilerplate for OpenGL project with GLFW and GLAD on Windows with MinGW. It also provides a
+This repository provides a boilerplate for OpenGL project with GLFW, GLAD and GLM on Windows with MinGW. It also provides a
 `.vscode/c_cpp_properties.json` file for VSCode.
 
 ## Structure
@@ -16,18 +16,25 @@ This is the structure of the boilerplate.
 │  │  │  ├─glad
 │  │  │  └─KHR
 │  │  └─src
-│  └─glfw
-│      ├─include
-│      │  └─GLFW
-│      └─lib
+│  ├─glfw
+│  │  ├─include
+│  │  │  └─GLFW
+│  │  └─lib
+│  └─glm
+│      └─glm
+│          ├─detail
+│          ├─ext
+│          ├─gtc
+│          ├─gtx
+│          └─simd
 └─src
 ```
 
 ### Libraries
 
-We will need `GLAD` and `GLFW` for our project. We have already placed `GLFW` (version 3.3.2) and `GLAD` (verison 4.6) files under the `lib` folder.
+We will need `GLAD`, `GLFW` and `GLM` for our project. We have already placed `GLFW` (version 3.3.2), `GLAD` (verison 4.6) and `GLM` (version 0.9.9.8) files under the `lib` folder.
 
-You can go [here](http://www.glfw.org/download.html) to download the pre-compiled binaries of GLFW, and go [here](https://glad.dav1d.de/) to generate GLAD source of your preferred version.
+You can go [here](http://www.glfw.org/download.html) to download the pre-compiled binaries of GLFW, go [here](https://glad.dav1d.de/) to generate GLAD source of your preferred version, and go [here](https://github.com/g-truc/glm/releases) to download GLM.
 
 ### Sources
 
