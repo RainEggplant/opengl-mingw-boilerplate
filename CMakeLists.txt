@@ -10,7 +10,8 @@ aux_source_directory(${SRC_DIR} SOURCES)
 set(GLFW_DIR "${LIB_DIR}/glfw")
 set(GLAD_DIR "${LIB_DIR}/glad")
 set(GLM_DIR "${LIB_DIR}/glm")
-link_directories(${GLFW_DIR}/lib)
+set(SOIL_DIR "${LIB_DIR}/soil")
+link_directories(${GLFW_DIR}/lib ${SOIL_DIR}/lib)
 
 # Add the executable
 add_executable(${PROJECT_NAME} ${SOURCES})
@@ -31,3 +32,8 @@ target_link_libraries(${PROJECT_NAME} "glad" "${CMAKE_DL_LIBS}")
 
 # GLM
 target_include_directories(${PROJECT_NAME} PRIVATE "${GLM_DIR}")
+
+# SOIL
+target_link_libraries(${PROJECT_NAME} SOIL)
+target_link_libraries(${PROJECT_NAME} opengl32)
+target_include_directories(${PROJECT_NAME} PRIVATE "${SOIL_DIR}/include")

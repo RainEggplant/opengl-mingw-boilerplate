@@ -20,21 +20,24 @@ This is the structure of the boilerplate.
 │  │  ├─include
 │  │  │  └─GLFW
 │  │  └─lib
-│  └─glm
-│      └─glm
-│          ├─detail
-│          ├─ext
-│          ├─gtc
-│          ├─gtx
-│          └─simd
+│  ├─glm
+│  │  └─glm
+│  │      ├─detail
+│  │      ├─ext
+│  │      ├─gtc
+│  │      ├─gtx
+│  │      └─simd
+│  └─soil
+│      ├─include
+│      └─lib
 └─src
 ```
 
 ### Libraries
 
-We will need `GLAD`, `GLFW` and `GLM` for our project. We have already placed `GLFW` (version 3.3.2), `GLAD` (verison 4.6) and `GLM` (version 0.9.9.8) files under the `lib` folder.
+We will need `GLAD`, `GLFW`, `GLM` and `SOIL` for our project. We have already placed `GLFW` (version 3.3.2), `GLAD` (verison 4.6) and `GLM` (version 0.9.9.8) files under the `lib` folder. We have also re-compiled SOIL (version July 7, 2008) to fit our environment, and placed its files likewise.
 
-You can go [here](http://www.glfw.org/download.html) to download the pre-compiled binaries of GLFW, go [here](https://glad.dav1d.de/) to generate GLAD source of your preferred version, and go [here](https://github.com/g-truc/glm/releases) to download GLM.
+If you want libraries of certain versions, you can still keep the structure of this project, and go [here](http://www.glfw.org/download.html) to download the pre-compiled binaries of GLFW, go [here](https://glad.dav1d.de/) to generate GLAD source of your preferred version, go [here](https://github.com/g-truc/glm/releases) to download GLM, and go [here](http://www.lonesock.net/soil.html) to download GLM.
 
 ### Sources
 
