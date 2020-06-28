@@ -11,7 +11,8 @@ set(GLFW_DIR "${LIB_DIR}/glfw")
 set(GLAD_DIR "${LIB_DIR}/glad")
 set(GLM_DIR "${LIB_DIR}/glm")
 set(SOIL_DIR "${LIB_DIR}/soil")
-link_directories(${GLFW_DIR}/lib ${SOIL_DIR}/lib)
+set(FREETYPE_DIR "${LIB_DIR}/freetype")
+link_directories(${GLFW_DIR}/lib ${SOIL_DIR}/lib ${FREETYPE_DIR}/lib)
 
 # Add the executable
 add_executable(${PROJECT_NAME} ${SOURCES})
@@ -37,3 +38,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE "${GLM_DIR}")
 target_link_libraries(${PROJECT_NAME} SOIL)
 target_link_libraries(${PROJECT_NAME} opengl32)
 target_include_directories(${PROJECT_NAME} PRIVATE "${SOIL_DIR}/include")
+
+# Freetype
+target_link_libraries(${PROJECT_NAME} freetype)
+target_include_directories(${PROJECT_NAME} PRIVATE "${FREETYPE_DIR}/include")
