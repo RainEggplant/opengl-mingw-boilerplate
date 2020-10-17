@@ -3,15 +3,15 @@ project(opengl-mingw-boilerplate)
 
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 
-# Source and library files
+# Source and external package files
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
-set(LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib")
+set(EXT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/external")
 aux_source_directory(${SRC_DIR} SOURCES)
-set(GLFW_DIR "${LIB_DIR}/glfw")
-set(GLAD_DIR "${LIB_DIR}/glad")
-set(GLM_DIR "${LIB_DIR}/glm")
-set(SOIL_DIR "${LIB_DIR}/soil")
-set(FREETYPE_DIR "${LIB_DIR}/freetype")
+set(GLFW_DIR "${EXT_DIR}/glfw")
+set(GLAD_DIR "${EXT_DIR}/glad")
+set(GLM_DIR "${EXT_DIR}/glm")
+set(SOIL_DIR "${EXT_DIR}/soil")
+set(FREETYPE_DIR "${EXT_DIR}/freetype")
 link_directories(${GLFW_DIR}/lib ${SOIL_DIR}/lib ${FREETYPE_DIR}/lib)
 
 # Add the executable
